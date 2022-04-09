@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import styles from './Input.module.scss';
 
 function Input(props) {
@@ -7,14 +6,6 @@ function Input(props) {
   const inputClass = [styles.input];
   const fieldsetClass = [styles.fieldset];
   const legendClass = [styles.legend];
-
-  const [isFocused, setIsFocused] = useState(false);
-
-  if (isFocused) {
-    fieldsetClass.push(styles.fieldsetFocus);
-    legendClass.push(styles.legendFocus);
-    labelClass.push(styles.labelAnimate);
-  }
 
   return (
     <div className={containerClass.join(' ')}>
@@ -27,8 +18,6 @@ function Input(props) {
           id={props.name}
           name={props.name}
           className={inputClass.join(' ')}
-          onFocus={() => setIsFocused(true)}
-          onBlur={() => setIsFocused(false)}
         />
         <fieldset aria-hidden="true" className={fieldsetClass.join(' ')}>
           <legend className={legendClass.join(' ')}>

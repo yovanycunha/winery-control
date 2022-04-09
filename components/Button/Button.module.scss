@@ -1,0 +1,33 @@
+.btn {
+  width: 100%;
+
+  color: #fff;
+
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.2rem;
+
+  padding: 24px 56px;
+  border: 0;
+
+  background-color: #8884ff;
+  border-radius: 4px;
+
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.9;
+  }
+
+  &:focus {
+    outline: 0;
+  }
+
+  &.disabled {
+    opacity: 0.4;
+
+    cursor: not-allowed;
+  }
+}
